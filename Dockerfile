@@ -1,12 +1,15 @@
-FROM microsoft/dotnet:2.1-sdk as build-env
+FROM microsoft/aspnetcore-build:2 as build-env
 WORKDIR /app
-#setup node
-ENV NODE_VERSION 8.11.1
 
-RUN curl -SL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz" --output nodejs.tar.gz \
-    && tar -xzf "nodejs.tar.gz" -C /usr/local --strip-components=1 \
+ENV NODE_VERSION 8.11.1
+ENV NODE_DOWNLOAD_URL https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz
+
+RUN curl -SL "$NODE_DOWNLOAD_URL" --output nodejs.tar.gz \
+    && mkdir -p /usr/local/opt/nodejs8 \
+    && tar -xzf "nodejs.tar.gz" -C /usr/local/opt/nodejs8 --strip-components=1 \
     && rm nodejs.tar.gz \
-    && ln -s /usr/local/bin/node /usr/local/bin/nodejs
+    && ln -f -s /usr/local/opt/nodejs8/bin/node /usr/local/bin/node \
+    && ln -f -s /usr/local/opt/nodejs8/bin/node /usr/local/bin/nodejs
 
 # copy csproj and restore as distinct layers
 COPY *.csproj ./
@@ -17,15 +20,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # build runtime image
-FROM microsoft/aspnetcore:2.0
+FROM microsoft/aspnetcore:2
 WORKDIR /app
-#setup node, this is only needed if you use Node both at runtime and build time. Some people may only need the build part.
-ENV NODE_VERSION 8.11.1
-
-RUN curl -SL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz" --output nodejs.tar.gz \
-    && tar -xzf "nodejs.tar.gz" -C /usr/local --strip-components=1 \
-    && rm nodejs.tar.gz \
-    && ln -s /usr/local/bin/node /usr/local/bin/nodejs
-
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "dotnet-app.dll"]
