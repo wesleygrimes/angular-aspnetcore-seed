@@ -1,0 +1,27 @@
+<div class="mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
+
+    <ng-container matColumnDef="dateFormatted">
+      <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.dateFormatted}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="temperatureF">
+      <mat-header-cell *matHeaderCellDef>Temperature F</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.temperatureF}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="temperatureC">
+      <mat-header-cell *matHeaderCellDef>Temperature C</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.temperatureC}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="summary">
+      <mat-header-cell *matHeaderCellDef>Summary</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.summary}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
