@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using DotnetApp.Models;
 
-namespace DotnetApp
+namespace DotnetApp.Interfaces
 {
     public interface IDataService
     {

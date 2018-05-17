@@ -1,4 +1,4 @@
-namespace DotnetApp
+namespace DotnetApp.Models
 {
     public class WeatherForecast
     {
