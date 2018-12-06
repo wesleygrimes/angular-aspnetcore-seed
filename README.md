@@ -41,3 +41,9 @@ If you have issues when first running make sure that the `Full stack` debug targ
 ## Contributions Welcome
 
 This is a very informal project and any and all pull requests with improvements will be accepted. I look forward to your feedback!
+
+## Angular Training
+
+If you are new or experienced with Angular I highly recommend that you head over to Ultimate Angular and signup for the Angular Framework courses. Follow the link in the banner to do so.
+
+<a href="https://ultimatecourses.com/?ref=76683_ttll_neb"><img src="https://ultimatecourses.com/assets/img/banners/uc-github.svg" style="width:100%;max-width:100%"></a>
