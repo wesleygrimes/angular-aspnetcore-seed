@@ -1,6 +1,6 @@
 # angular-aspnetcore-seed
 
-Angular 6 / ASP.NET Core 2 Seed Project with full VS Code debugging
+Angular 7.2.0 / ASP.NET Core 2.2 Seed Project with full VS Code debugging
 
 ## Installation
 
@@ -16,7 +16,7 @@ Angular 6 / ASP.NET Core 2 Seed Project with full VS Code debugging
 
 ### Back-End
 
-The back-end is an ASP.NET Core 2 WebAPI application.
+The back-end is an ASP.NET Core 2.2 WebAPI application.
 
 * `Controllers` - Add new endpoints by creating or updating Controllers in this directory
 * `Models` - Add data models in this folder
@@ -26,11 +26,11 @@ The back-end is an ASP.NET Core 2 WebAPI application.
 
 ### Front-End
 
-You will find the front-end code in the `ClientApp` directory. This is a fully compatible Angular 6 CLI application. This means from within the `ClientApp` folder full `ng generate` capabilities are available and encouraged.
+You will find the front-end code in the `ClientApp` directory. This is a fully compatible Angular 7.2.0 CLI application. This means from within the `ClientApp` folder full `ng generate` capabilities are available and encouraged.
 
 ## Running the project
 
-This is an ASP.NET Core 2 project with an Angular 6 front-end. The dotnet project is configured to automatically build the Angular project when `dotnet run` is executed. This means that you do not need to worry about running `ng serve -o` manually. It also runs in hot reload mode so any changes made to the dotnet code and/or the angular code will cause an automatic reload and refresh in the browser.
+This is an ASP.NET Core 2.2 project with an Angular 6 front-end. The dotnet project is configured to automatically build the Angular project when `dotnet run` is executed. This means that you do not need to worry about running `ng serve -o` manually. It also runs in hot reload mode so any changes made to the dotnet code and/or the angular code will cause an automatic reload and refresh in the browser.
 
 ## Debugging from Visual Studio Code
 
