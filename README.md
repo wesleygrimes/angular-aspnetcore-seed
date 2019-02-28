@@ -1,6 +1,8 @@
+<div class="ultimate-courses-banner"><a href="https://ultimatecourses.com/angular?ref=76683_ttll_neb"><img src="https://ultimatecourses.com/assets/img/banners/ultimate-angular-leader.svg" style="width:100%;max-width:100%"></a></div>
+
 # angular-aspnetcore-seed
 
-Angular 7.2.0 / ASP.NET Core 2.2 Seed Project with full VS Code debugging
+Angular 7.2.7 / ASP.NET Core 2.2 Seed Project with full VS Code debugging
 
 ## Installation
 
@@ -18,11 +20,11 @@ Angular 7.2.0 / ASP.NET Core 2.2 Seed Project with full VS Code debugging
 
 The back-end is an ASP.NET Core 2.2 WebAPI application.
 
-* `Controllers` - Add new endpoints by creating or updating Controllers in this directory
-* `Models` - Add data models in this folder
-* `Interfaces` - Add any interfaces that will be implemented in this directory
-* `Services` - Add any services in this directory. Typically services will be making the direct HttpClient and Database interactions
-* `Startup.cs` - Startup configuration exists here, as well as registration of any data services that will be injected into Controllers at runtime
+- `Controllers` - Add new endpoints by creating or updating Controllers in this directory
+- `Models` - Add data models in this folder
+- `Interfaces` - Add any interfaces that will be implemented in this directory
+- `Services` - Add any services in this directory. Typically services will be making the direct HttpClient and Database interactions
+- `Startup.cs` - Startup configuration exists here, as well as registration of any data services that will be injected into Controllers at runtime
 
 ### Front-End
 
@@ -46,4 +48,4 @@ This is a very informal project and any and all pull requests with improvements 
 
 If you are new or experienced with Angular I highly recommend that you head over to Ultimate Angular and signup for the Angular Framework courses. Follow the link in the banner to do so.
 
-<a href="https://ultimatecourses.com/?ref=76683_ttll_neb"><img src="https://ultimatecourses.com/assets/img/banners/uc-github.svg" style="width:100%;max-width:100%"></a>
+<div class="ultimate-courses-banner"><a href="https://ultimatecourses.com/angular?ref=76683_ttll_neb"><img src="https://ultimatecourses.com/assets/img/banners/ultimate-angular-leader.svg" style="width:100%;max-width:100%"></a></div>
